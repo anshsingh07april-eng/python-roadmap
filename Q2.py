@@ -1,11 +1,5 @@
-#Add two numbers. Ask for two numbers and print their sum, difference, product and division result.
-a = int(input("Enter number 01: "))
-b = int(input("Enter number 02: "))
-c = a + b
-d = a - b
-e = a * b
-f = a / b
-print("The sum is:", c)
-print("The difference is:", d)
-print("The product is:", e)
-print("The division result is:", f)
+#Q2. Time converter. Take a number of minutes (for example 135) and print it as hours and minutes (2 hours 15 minutes). Use only // and %.
+minutes = int(input("Enter the number of minutes: "))
+hours = minutes // 60
+remaining_minutes = minutes % 60
+print(f"{hours} hours {remaining_minutes} minutes")

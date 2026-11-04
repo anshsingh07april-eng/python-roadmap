@@ -1,6 +1,13 @@
-#Q7. Sum of 1 to N. Ask for N and print the sum of all numbers from 1 to N using a loop.
-N = int(input("Enter a number: "))
-sum = 0
-for i in range(1, N + 1):
-    sum += i
-print(f"The sum of numbers from 1 to {N} is {sum}.")
+#Q7. Leap year. Take a year and print whether it is a leap year. Rule: divisible by 4, except century years, which must be divisible by 400. Test with 1900, 2000, 2024 and 2026.
+year = int(input("Enter a year: "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(f"{year} is a leap year.")
+        else:
+            print(f"{year} is not a leap year.")
+    else:
+        print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")

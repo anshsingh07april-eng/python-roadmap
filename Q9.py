@@ -1,12 +1,14 @@
-#Q9. Fix your old Q1. Rewrite your palindrome program from the zip file so it runs without an indentation error.
-n=int(input("Enter number:"))
-temp=n
-rev=0
-while(n>0):
-    dig=n%10
-    rev=rev*10+dig
-    n=n//10
-if(temp==rev):
-     print("The number is a palindrome!")
+#Q9. Triangle checker. Take three side lengths. First check whether they can form a triangle (sum of any two sides must be greater than the third). If valid, print whether it is equilateral, isosceles or scalene.
+side1 = float(input("Enter the length of the first side: "))
+side2 = float(input("Enter the length of the second side: "))
+side3 = float(input("Enter the length of the third side: "))
+
+if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:
+    if side1 == side2 == side3:
+        print("The triangle is equilateral.")
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        print("The triangle is isosceles.")
+    else:
+        print("The triangle is scalene.")
 else:
-    print("The number isn't a palindrome!")
+    print("The given side lengths cannot form a triangle.")
