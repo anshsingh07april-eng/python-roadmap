@@ -1,29 +1,43 @@
-#Q11. Challenge: Number tools. Take a positive integer and, using a while loop with % and // only (no string conversion), print the sum of its digits, the number of digits, the largest digit, and the reversed number. Then tell whether the number is a palindrome.
-num = int(input("Enter a positive integer: "))
+#Q11. Challenge: longest unique substring. Given a string, return the length of the longest substring with no repeating characters (for example, "abcabcbb" gives 3, "pwwkew" gives 3, "bbbbb" gives 1). Start with a brute-force version, then write a faster sliding-window version using a dictionary of last-seen positions.
 
-sum_of_digits = 0
-num_of_digits = 0
-largest_digit = 0
-reversed_num = 0
-original_num = num
+def longest_unique_substring_brute_force(s):
+    if not s:
+        return 0
 
-while num > 0:
-    digit = num % 10
-    sum_of_digits += digit
-    num_of_digits += 1
-    if digit > largest_digit:
-        largest_digit = digit
-    reversed_num = reversed_num * 10 + digit
-    num //= 10
+    max_length = 0
+    n = len(s)
 
-# Print the results
-print(f"Sum of digits: {sum_of_digits}")
-print(f"Number of digits: {num_of_digits}")
-print(f"Largest digit: {largest_digit}")
-print(f"Reversed number: {reversed_num}")
+    for i in range(n):
+        seen = set()
+        for j in range(i, n):
+            if s[j] in seen:
+                break
+            seen.add(s[j])
+        max_length = max(max_length, len(seen))
 
-# Check if the number is a palindrome
-if original_num == reversed_num:
-    print("The number is a palindrome.")
-else:
-    print("The number is not a palindrome.")
+    return max_length
+
+def longest_unique_substring_sliding_window(s):
+    if not s:
+        return 0
+
+    last_seen = {}
+    max_length = 0
+    start = 0
+
+    for end, char in enumerate(s):
+        if char in last_seen and last_seen[char] >= start:
+            start = last_seen[char] + 1
+        last_seen[char] = end
+        max_length = max(max_length, end - start + 1)
+
+    return max_length
+
+# Test cases
+print(longest_unique_substring_brute_force("abcabcbb"))  # 3
+print(longest_unique_substring_brute_force("pwwkew"))    # 3
+print(longest_unique_substring_brute_force("bbbbb"))     # 1
+
+print(longest_unique_substring_sliding_window("abcabcbb"))  # 3
+print(longest_unique_substring_sliding_window("pwwkew"))    # 3
+print(longest_unique_substring_sliding_window("bbbbb"))     # 1

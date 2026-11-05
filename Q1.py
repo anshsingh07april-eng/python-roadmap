@@ -1,23 +1,30 @@
-#Q1. Safe calculator. Take two numbers and print their sum, difference, product, division, floor division and remainder. If the second number is zero, print a friendly message instead of crashing for division, floor division and remainder.
-a = float(input("Enter the first number: "))
-b = float(input("Enter the second number: "))
+#Q1. List statistics by hand. Take numbers from the user in one line, separated by spaces. Print the largest, smallest, second largest and the average. Do not use max(), min(), sum() or sorted(). Use loops only. Handle an empty input and a list with only one number.
+numbers = input("Enter numbers separated by spaces: ").split()
 
-sum = a + b
-difference = a - b
-product = a * b
-
-if b != 0:
-    division = a / b
-    floor_division = a // b
-    remainder = a % b  
+if not numbers:
+    print("No numbers entered.")
 else:
-    division = "undefined (division by zero)"
-    floor_division = "undefined (floor division by zero)"
-    remainder = "undefined (remainder by zero)"
-
-print(f"Sum: {sum}")
-print(f"Difference: {difference}")
-print(f"Product: {product}")
-print(f"Division: {division}")
-print(f"Floor Division: {floor_division}")  
-print(f"Remainder: {remainder}")
+    numbers = [int(x) for x in numbers]
+    
+    largest = numbers[0]
+    smallest = numbers[0]
+    total = numbers[0]
+    
+    for n in numbers:
+        if n > largest:
+            largest = n
+        if n < smallest:
+            smallest = n
+        total += n
+    
+    average = total / len(numbers)
+    
+    second_largest = smallest
+    for n in numbers:
+        if n < largest and n > second_largest:
+            second_largest = n
+    
+    print(f"Largest: {largest}")
+    print(f"Smallest: {smallest}")
+    print(f"Second Largest: {second_largest}")
+    print(f"Average: {average}")

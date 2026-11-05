@@ -1,10 +1,28 @@
-#Q3. Interest calculator. Take principal, rate (per year) and time (years). Print the simple interest and the compound interest, both rounded to 2 decimal places using :.2f in the f-string.
-principal = float(input("Enter the principal amount in ₹ : "))
-rate = float(input("Enter the annual interest rate (in %): "))
-time = float(input("Enter the time in years: "))
+#Q3. Mutability trap. Before running anything, write your prediction in a comment for each snippet, then run it and compare:
+#• a = [1, 2, 3], b = a, b.append(4), print(a)
+#• a = [1, 2, 3], b = a[:], b.append(4), print(a)
+#• a = [[1, 2], [3, 4]], b = a.copy(), b[0].append(99), print(a)
+#• the same as the third, but with copy.deepcopy
+#In a comment, explain the difference between assignment, shallow copy and deep copy.
 
-simple_interest = (principal * rate * time) / 100
-compound_interest = principal * (1 + rate / 100) ** time - principal
+import copy
 
-print(f"Simple Interest: ₹{simple_interest:.2f}")
-print(f"Compound Interest: ₹{compound_interest:.2f}")
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)  # Prediction: [1, 2, 3, 4]
+
+a = [1, 2, 3]
+b = a[:]
+b.append(4)
+print(a)  # Prediction: [1, 2, 3]
+
+a = [[1, 2], [3, 4]]
+b = a.copy()
+b[0].append(99)
+print(a)  # Prediction: [[1, 2, 99], [3, 4]]
+
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(a)
+b[0].append(99)
+print(a)  # Prediction: [[1, 2], [3, 4]]

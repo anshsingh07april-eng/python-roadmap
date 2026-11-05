@@ -1,9 +1,21 @@
-#Q4. String report. Take a sentence from the user and print: its length, the uppercase version, the lowercase version, the title-case version, the number of words, and the sentence with spaces replaced by hyphens.
+#Q4. Word frequency. Take a sentence. Count how many times each word appears using a dictionary (ignore case and punctuation). Print all counts, then the three most frequent words. Do not use collections.Counter for the first version. Afterwards, redo it with Counter and compare.
+from collections import Counter
+import string
+
 sentence = input("Enter a sentence: ")
 
-print(f"Length: {len(sentence)}")
-print(f"Uppercase: {sentence.upper()}")
-print(f"Lowercase: {sentence.lower()}")
-print(f"Title-case: {sentence.title()}")
-print(f"Number of words: {len(sentence.split())}")
-print(f"Hyphenated: {sentence.replace(' ', '-')}")
+sentence = sentence.translate(
+    str.maketrans('', '', string.punctuation)
+).lower()
+
+words = sentence.split()
+
+word_freq = Counter(words)
+
+print("Word frequencies:")
+for word, freq in word_freq.items():
+    print(f"{word}: {freq}")
+
+print("\nThree most frequent words:")
+for word, freq in word_freq.most_common(3):
+    print(f"{word}: {freq}")

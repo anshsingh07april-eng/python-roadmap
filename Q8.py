@@ -1,33 +1,29 @@
-#Q8. Report card. Take marks for 5 subjects (each out of 100). Print the total, the percentage, and the grade (90 and above is A, 75 and above is B, 60 and above is C, 40 and above is D, otherwise Fail). If any single subject is below 33, the result is Fail whatever the percentage. Reject marks outside 0 to 100.
-subjects = []
-for i in range(5):
-    while True:
-        try:
-            mark = float(input(f"Enter marks for subject {i+1}: "))
-            if 0 <= mark <= 100:
-                subjects.append(mark)
-                break
-            else:
-                print("Please enter a valid mark between 0 and 100.")
-        except ValueError:
-            print("Please enter a valid number.")
+#Q8. Matrix basics. Store a 3 by 3 matrix as a list of lists. Print it neatly, then print its transpose, the sum of each row, and the sum of both diagonals. Do not use NumPy.
 
-total = sum(subjects)
-percentage = total / 5
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-if any(mark < 33 for mark in subjects):
-    grade = "Fail"
-elif percentage >= 90:
-    grade = "A"
-elif percentage >= 75:
-    grade = "B"
-elif percentage >= 60:
-    grade = "C"
-elif percentage >= 40:
-    grade = "D"
-else:
-    grade = "Fail"
+# Print the matrix neatly
+print("Original Matrix:")
+for row in matrix:
+    print(row)
 
-print(f"Total: {total}")
-print(f"Percentage: {percentage:.2f}%")
-print(f"Grade: {grade}")
+# Print the transpose
+print("\nTranspose:")
+for row in zip(*matrix):
+    print(list(row))
+
+# Print the sum of each row
+print("\nSum of each row:")
+for i, row in enumerate(matrix):
+    print(f"Row {i + 1}: {sum(row)}")
+
+# Print the sum of both diagonals
+print("\nSum of both diagonals:")
+primary_diagonal = sum(matrix[i][i] for i in range(3))
+secondary_diagonal = sum(matrix[i][2 - i] for i in range(3))
+print(f"Primary diagonal: {primary_diagonal}")
+print(f"Secondary diagonal: {secondary_diagonal}")
