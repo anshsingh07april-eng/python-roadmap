@@ -7,6 +7,8 @@ My daily Python practice for the roadmap running from November 2026 to February 
 - `day01/` - Basics: input and output, type conversion, operators, if-else, and simple loops.
 - `day02/` - Strings and conditions: safe calculator, time converter, interest calculator, palindrome, leap year, triangle checker, report card, password strength checker, and number tools.
 - `day03/` - Lists, dictionaries and functions: list statistics, removing duplicates, mutability, word frequency, two-sum, anagrams, student database, matrix basics, list rotation, balanced brackets, and longest unique substring.
+- `day04/` - Functions, tuples and sets: square and cube, default arguments, returning two values, variable scope, tuple basics, set operations, unique words, prime check, vowel counter, even numbers, and a simple contact book.
+- `day05/` - Errors and files: safe number input, safe division, common errors, try/except/else/finally, writing, reading and appending files, file statistics, missing file handling, a notes app, and a simple expense tracker.
 
 ## How to run
 
@@ -28,12 +30,13 @@ My daily Python practice for the roadmap running from November 2026 to February 
 | 1 | Basics and simple loops | Done |
 | 2 | Strings and conditions | Done |
 | 3 | Lists, dictionaries, functions | Done |
+| 4 | Functions, tuples, sets | Done |
+| 5 | Exceptions and files | Done |
 
 ## What is next
 
-- Exceptions and input validation
-- File handling
 - Object-oriented programming
+- Comprehensions, modules and Git basics
 - NumPy and Pandas for data analysis
 - Small projects, each with its own README
 
