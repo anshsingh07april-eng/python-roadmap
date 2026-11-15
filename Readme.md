@@ -8,7 +8,11 @@ My daily Python practice for the roadmap running from November 2026 to February 
 - `day02/` - Strings and conditions: safe calculator, time converter, interest calculator, palindrome, leap year, triangle checker, report card, password strength checker, and number tools.
 - `day03/` - Lists, dictionaries and functions: list statistics, removing duplicates, mutability, word frequency, two-sum, anagrams, student database, matrix basics, list rotation, balanced brackets, and longest unique substring.
 - `day04/` - Functions, tuples and sets: square and cube, default arguments, returning two values, variable scope, tuple basics, set operations, unique words, prime check, vowel counter, even numbers, and a simple contact book.
-- `day05/` - Errors and files: safe number input, safe division, common errors, try/except/else/finally, writing, reading and appending files, file statistics, missing file handling, a notes app, and a simple expense tracker.
+- `day05/` - Errors and files: safe number input, safe division, common errors, try/except/else/finally, reading, writing and appending files, file statistics, a notes app, and a simple expense tracker.
+- `day06/` - Arrays (lists): indexing and slicing, searching, reversing, second smallest, merging sorted lists, and matrix row and column sums.
+- `day07/` - Sets and dictionaries (hash maps): unique items, common and different items, character and word counts, flipping a dictionary, first non-repeating character, Two Sum, and grouping.
+- `day08/` - Linked lists: Node class, building and traversing a list, adding, searching and deleting nodes, reversing a list, and finding the middle node.
+- `day09/` - Object oriented programming: classes and objects, `__init__` and `self`, methods, inheritance, polymorphism, special methods, and class variables.
 
 ## How to run
 
@@ -32,11 +36,15 @@ My daily Python practice for the roadmap running from November 2026 to February 
 | 3 | Lists, dictionaries, functions | Done |
 | 4 | Functions, tuples, sets | Done |
 | 5 | Exceptions and files | Done |
+| 6 | Arrays (lists) | Done |
+| 7 | Sets and dictionaries | Done |
+| 8 | Linked lists | Done |
+| 9 | Object oriented programming | Done |
 
 ## What is next
 
-- Object-oriented programming
-- Comprehensions, modules and Git basics
+- Stack, queue and recursion
+- Comprehensions, generators, modules and Git basics
 - NumPy and Pandas for data analysis
 - Small projects, each with its own README
 
