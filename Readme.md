@@ -14,6 +14,7 @@ My daily Python practice for the roadmap running from November 2026 to February 
 - `day08/` - Linked lists: Node class, building and traversing a list, adding, searching and deleting nodes, reversing a list, and finding the middle node.
 - `day09/` - Object oriented programming: classes and objects, `__init__` and `self`, methods, inheritance, polymorphism, special methods, and class variables.
 - `day10/` - Recursion: base case and recursive case, countdown, factorial, sum of digits, power, reversing strings, palindrome, list sum and largest, Fibonacci with memoization, recursive binary search, and Tower of Hanoi.
+- `day11/` - Stack and queue: stack with a list and a Stack class, undo, balanced brackets, postfix evaluation, queue with deque and a Queue class, a ticket counter, next greater element, and BFS shortest path.
 
 ## How to run
 
@@ -42,10 +43,10 @@ My daily Python practice for the roadmap running from November 2026 to February 
 | 8 | Linked lists | Done |
 | 9 | Object oriented programming | Done |
 | 10 | Recursion | Done |
+| 11 | Stack and queue | Done |
 
 ## What is next
 
-- Stack and queue
 - Comprehensions, generators, modules and Git basics
 - NumPy and Pandas for data analysis
 - Small projects, each with its own README
